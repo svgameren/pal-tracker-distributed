@@ -5,6 +5,7 @@ applications:
   memory: 1G
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: http://FILL_ME_IN
+    TRUST_CERTS: FILL_ME_IN
   services:
   - tracker-timesheets-database
+  - tracker-service-registry
