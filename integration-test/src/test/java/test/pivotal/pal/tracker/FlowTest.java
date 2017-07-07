@@ -10,6 +10,9 @@ import org.junit.Test;
 import test.pivotal.pal.tracker.support.ApplicationServer;
 import test.pivotal.pal.tracker.support.HttpClient;
 
+import java.util.Collections;
+
+import static java.util.Collections.emptyMap;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Fail.fail;
 import static test.pivotal.pal.tracker.support.MapBuilder.jsonMapBuilder;
