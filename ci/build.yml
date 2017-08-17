@@ -21,6 +21,13 @@ run:
     # || mysql stop <-- this is used to ensure that we always stop mysql, and concourse detects failures correctly.
     - |
       export DEBIAN_FRONTEND="noninteractive"
+
+      apt-get update
+      apt-get install -y software-properties-common
+      apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
+      apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+      add-apt-repository 'deb http://ftp.osuosl.org/pub/mariadb/repo/10.2/ubuntu trusty main'
+
       apt-get update
       apt-get -y install mariadb-server
       service mysql start
