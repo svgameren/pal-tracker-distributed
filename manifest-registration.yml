@@ -4,5 +4,8 @@ applications:
   host: registration-pal-svg
   memory: 1G
   instances: 1
+  env:
+    TRUST_CERTS: api.sys.longs.pal.pivotal.io
   services:
   - tracker-registration-database
+  - tracker-service-registry
