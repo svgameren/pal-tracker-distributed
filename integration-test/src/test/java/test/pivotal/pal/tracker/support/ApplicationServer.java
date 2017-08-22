@@ -40,6 +40,7 @@ public class ApplicationServer {
                 .put("EUREKA_CLIENT_ENABLED", "false")
                 .put("RIBBON_EUREKA_ENABLED", "false")
                 .put("APPLICATION_OAUTH_ENABLED", "false")
+                .put("SPRING_ZIPKIN_ENABLED", "false")
                 .put("REGISTRATION_SERVER_RIBBON_LISTOFSERVERS", "http://localhost:8883")
                 .build()
         );

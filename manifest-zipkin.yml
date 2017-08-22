@@ -1,0 +1,10 @@
+applications:
+- name: tracker-zipkin
+  path: ./platform-services/zipkin-server/build/libs/zipkin-server.jar
+  host: zipkin-pal-svg
+  memory: 1G
+  instances: 1
+  env:
+    TRUST_CERTS: api.sys.longs.pal.pivotal.io,uaa.sys.longs.pal.pivotal.io
+  services:
+  - tracker-amqp

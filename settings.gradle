@@ -22,5 +22,6 @@ include "databases:timesheets-database"
 
 include "platform-services:eureka-server"
 include "platform-services:oauth-server"
+include "platform-services:zipkin-server"
 
 include "integration-test"
