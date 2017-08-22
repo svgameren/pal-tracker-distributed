@@ -8,3 +8,4 @@ applications:
     TRUST_CERTS: api.sys.longs.pal.pivotal.io,uaa.sys.longs.pal.pivotal.io
   services:
   - tracker-amqp
+  - tracker-config-server

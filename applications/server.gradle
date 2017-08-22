@@ -16,6 +16,7 @@ dependencies {
 
     compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry"
     compile "io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker"
+    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-config-client"
     compile "io.pivotal.spring.cloud:spring-cloud-sso-connector:$springCloudSsoVersion"
 
     compile "org.springframework.cloud:spring-cloud-starter-oauth2"
@@ -33,9 +34,14 @@ dependencies {
 }
 
 bootRun.environment([
+        "REGISTRATION_SERVER_ENDPOINT": "http://registration-server",
         "APPLICATION_OAUTH_ENABLED": true,
         "SECURITY_OAUTH2_CLIENT_CLIENT_ID": "tracker-client",
         "SECURITY_OAUTH2_CLIENT_CLIENT_SECRET": "supersecret",
         "SECURITY_USER_NAME": "actuator",
         "SECURITY_USER_PASSWORD": "operations4red"
+])
+
+test.environment([
+        "REGISTRATION_SERVER_ENDPOINT": "http://registration-server"
 ])
