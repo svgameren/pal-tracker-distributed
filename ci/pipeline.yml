@@ -4,7 +4,7 @@ resources:
   type: git
   source:
     uri: {{github-repo}}
-    branch: my-work
+    branch: pal-tracker-distributed
     private_key: {{github-private-key}}
 
 - name: version
