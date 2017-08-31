@@ -4,8 +4,8 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: java
-    tag: '8'
+    repository: openjdk
+    tag: '8-jdk'
 
 inputs:
 - name: pal-tracker
@@ -23,13 +23,7 @@ run:
       export DEBIAN_FRONTEND="noninteractive"
 
       apt-get update
-      apt-get install -y software-properties-common
-      apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
-      apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
-      add-apt-repository 'deb http://ftp.osuosl.org/pub/mariadb/repo/10.2/ubuntu trusty main'
-
-      apt-get update
-      apt-get -y install mariadb-server
+      apt-get -y install mysql-server
       service mysql start
 
       cd pal-tracker
